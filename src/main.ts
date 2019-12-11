@@ -50,6 +50,7 @@ const run = async () => {
         command += `--name ${CONTAINER_NAME} `;
         command += ` mcr.microsoft.com/azure-cli:${azcliversion} ${startCommand}`;
         console.log(`${START_SCRIPT_EXECUTION_MARKER}${azcliversion}`);
+        console.log(command);
         await executeDockerCommand(command);
         console.log("az script ran successfully.");
     } catch (error) {
